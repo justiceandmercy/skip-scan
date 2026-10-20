@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skip-scan"
+version = "0.1.0"
+description = "Find skipped and focused tests hiding in a codebase."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "skip-scan contributors" }]
+
+[project.scripts]
+skip-scan = "skipscan.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["skipscan*"]
